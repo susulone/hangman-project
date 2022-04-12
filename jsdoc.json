@@ -20,7 +20,7 @@
     "scripts": [],
     "menu": {
       "Github repo": {
-        "href": "https://github.com/susulone",
+        "href": "https://github.com/susulone/tamk-VCT-testing-project",
         "target": "_blank",
         "class": "menu-item",
         "id": "repository"
