@@ -29,3 +29,25 @@ describe("states", () => {
     expect(states.lose).toBeFunction();
   });
 });
+
+describe("win", () => {
+  it("spying using original implementation", () => {
+    const spy = jest.spyOn(states, "win");
+    const anwserArray = ["C", "A", "M", "E", "L"];
+    const remainingLives = 6;
+
+    expect(states.win(remainingLives, anwserArray)).toBe(0);
+    expect(spy).toHaveBeenCalledWith(6, ["C", "A", "M", "E", "L"]);
+  });
+});
+
+describe("lose", () => {
+  it("spying using original implementation", () => {
+    const spy = jest.spyOn(states, "lose");
+    const chosenWord = "CAMEL";
+    const remainingLives = 6;
+
+    expect(states.lose(remainingLives, chosenWord)).toBe(0);
+    expect(spy).toHaveBeenCalledWith(6, "CAMEL");
+  });
+});
