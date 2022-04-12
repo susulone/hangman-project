@@ -13,6 +13,7 @@
     }
   },
   "scripts": {
+    "jsdoc": "jsdoc -a all -c jsdoc.json -r -R README.md index.js -d docs/jsdoc && jsdoc2md --files index.js > docs/API.md",
     "test": "jest --watchAll --verbose",
     "testAll": "jest --verbose --coverage --detectOpenHandles"
   },
