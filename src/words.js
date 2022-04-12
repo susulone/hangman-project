@@ -2,8 +2,8 @@
 
 /**
  * Contains everything to do with the words.
- * @module Words
- * @namespace Words
+ * @module words
+ * @namespace words
  */
 const words = {
   /**
