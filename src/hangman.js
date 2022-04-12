@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * This module contains the ASCII art for the different stages of the gallows and a method for returning the correct stage.
  * @module hangman
