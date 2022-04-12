@@ -27,17 +27,44 @@ describe("hangman", () => {
     expect(hangman).toContainKey("draw");
   });
 
-  it("'draw' should be a function", () => {
+  it("'draw' should be a method", () => {
     expect(hangman.draw).toBeFunction();
   });
+});
 
-  it("'draw' should return the correct stage of the hangman when the player has 6 lives left", () => {
-    const remaningLives = 6;
-    expect(hangman.draw(remaningLives)).toEqual(hangman.stages[0]);
-  });
-
-  it("'draw' should return the correct stage of the hangman when the player has 0 lives left", () => {
-    const remaningLives = 0;
-    expect(hangman.draw(remaningLives)).toEqual(hangman.stages[6]);
+describe("draw", () => {
+  [
+    {
+      input: 6,
+      expected: hangman.stages[0],
+    },
+    {
+      input: 5,
+      expected: hangman.stages[1],
+    },
+    {
+      input: 4,
+      expected: hangman.stages[2],
+    },
+    {
+      input: 3,
+      expected: hangman.stages[3],
+    },
+    {
+      input: 2,
+      expected: hangman.stages[4],
+    },
+    {
+      input: 1,
+      expected: hangman.stages[5],
+    },
+    {
+      input: 0,
+      expected: hangman.stages[6],
+    },
+  ].forEach(({ input: currentLives, expected: hangmanStage }) => {
+    it(`should return the correct stage of the hangman when the player has ${currentLives} lives left`, () => {
+      expect(hangman.draw(currentLives)).toEqual(hangmanStage);
+    });
   });
 });
