@@ -13,13 +13,21 @@ describe("playerInput", () => {
     expect(playerInput.get).toBeFunction();
   });
 
-  // it("'get' should return a string", () => {
-  //   expect(playerInput.get()).toBeString();
-  // });
+  it("'get' should return a string", () => {
+    const spy = jest.spyOn(playerInput, "get");
+    spy.mockImplementation((input) => "a");
 
-  // it("'get' should not return empty", () => {
-  //   expect(playerInput.get()).not.toBeNull();
-  // });
+    expect(playerInput.get("a")).toBe("a");
+    expect(spy).toHaveBeenCalledWith("a");
+  });
+
+  it("'get' should not return empty", () => {
+    const spy = jest.spyOn(playerInput, "get");
+    spy.mockImplementation((input) => "a");
+
+    expect(playerInput.get("a")).not.toBeNull();
+    expect(spy).toHaveBeenCalledWith("a");
+  });
 
   it("should contain a key  called 'validate'", () => {
     expect(playerInput).toContainKey("get");
