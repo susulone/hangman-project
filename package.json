@@ -1,0 +1,37 @@
+{
+  "name": "tamk-vct-testing-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "jest": {
+    "setupFilesAfterEnv": [
+      "jest-extended/all"
+    ],
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
+  "scripts": {
+    "test": "jest --watchAll --verbose",
+    "testAll": "jest --verbose --coverage --detectOpenHandles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/susulone/tamk-VCT-testing-project.git"
+  },
+  "keywords": [],
+  "author": "Suvi Sulonen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/susulone/tamk-VCT-testing-project/issues"
+  },
+  "homepage": "https://github.com/susulone/tamk-VCT-testing-project#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "jest": "^27.5.1",
+    "jest-extended": "^2.0.0"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
