@@ -15,7 +15,6 @@ const words = {
   /**
    * This method generates one random word from a the array of words given as an argument.
    * @memberof words
-   * @param {Array} words is an array containing strings that is used to choose the return value from
    * @returns {String}  one randomly selected word from the <tt>words</tt> array
    */
   getWord() {
@@ -27,7 +26,7 @@ const words = {
   /**
    * This method takes the word given as an argument and returns an equal amount of blank spaces (<tt>'_'</tt>).
    * @memberof words
-   * @param {String} chosenWord a word of random length
+   * @param {any} chosenWord a word of random length
    * @returns {Array} the same amount of underscores as the <tt>chosenWords</tt> has letters
    */
   displayWord: (chosenWord) => {
