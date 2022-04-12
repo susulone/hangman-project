@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * Contains everything to do with the words.
  * @module Words
