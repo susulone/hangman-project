@@ -2,8 +2,7 @@
 
 /**
  * @license
- * @copyright 2022
- * @author Suvi Sulonen <suvi.sulonen@gmail.com>
+ * Copyright 2022 Suvi Sulonen <suvi.sulonen@gmail.com>
  *
  * This file is part of Hangman Test Project.
  *
