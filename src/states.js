@@ -21,7 +21,7 @@ import chalk from "chalk";
  */
 
 /**
- * Description to be added
+ * This object holds the game screens that are called when the player wins or loses. It also holds the game logo that is called multiple times through out the code.
  * @module states
  * @namespace states
  * @requires align
@@ -29,9 +29,9 @@ import chalk from "chalk";
  */
 const states = {
   /**
-   * This method explains the rules of the game.
+   * This method returns the game logo.
    * @memberof states
-   *
+   * @returns {String} the game logo
    */
   intro: () => {
     const welcome = chalk.red(`
@@ -48,11 +48,12 @@ const states = {
     return welcome;
   },
   /**
-   * This will be shown if the player has won the game.
+   * This method will print all the relevant information when the player has won the game.
    * @memberof states
-   * @param {Number} remainingLives
-   * @param {Array} answerArray
-   * @param {String} chosenWord
+   * @param {Number} remainingLives number of lives left at the end of the game
+   * @param {Array} answerArray the fully filled array with no blank spaces left
+   * @param {String} chosenWord the right word the user was trying to quess
+   * @returns {Number} 0 for the process.exit
    */
   win: (remainingLives, answerArray, chosenWord) => {
     console.clear();
@@ -71,10 +72,11 @@ const states = {
     return 0;
   },
   /**
-   * This will be shown if the player has lost the game.
+   * This method will print all the relevant information when the player has lost the game.
    * @memberof states
-   * @param {Number} remainingLives
-   * @param {String} chosenWord
+   * @param {Number} remainingLives number of lives left at the end of the game
+   * @param {String} chosenWord the right word the user was trying to quess
+   * @returns {Number} 0 for the process.exit
    */
   lose: (remainingLives, chosenWord) => {
     console.clear();
