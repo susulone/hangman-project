@@ -1,10 +1,6 @@
 # Javascript Hangman Testing Project
 
----
-
 ## Table of contents
-
----
 
 - [About this Project](#about)
 - [Background](#background)
@@ -19,19 +15,13 @@
 
 ## About this project<a name="about"></a>
 
----
-
 This project is a command line version of the classic game of Hangman. Behind the scenes this project also includes unit testing for the game's different modules.
 
 ## Background<a name="background"></a>
 
----
-
 This project was made as a part of TAMK's Version Control and Testing course. The purpose of this project is to familiarize myself with the consepts of unit testing and project documentation and learn how to apply them to my projects.
 
 ## Used framewoks and libraries<a name= "frameworks-libraries"></a>
-
----
 
 This project was build using [Node.js](https://nodejs.org/en/) and ECMAScript2015+ syntaxes.
 
@@ -54,8 +44,6 @@ This project was build using [Node.js](https://nodejs.org/en/) and ECMAScript201
 
 ## Future code development<a name= "future-dev"></a>
 
----
-
 Source code will be developed over time to handle new features.
 
 The following is a list of potential feature enhancements:
@@ -68,19 +56,13 @@ The following is a list of potential feature enhancements:
 
 ## Release information<a name= "releases"></a>
 
----
-
 - 1.0.0 Released (2022-04-13)
 
 ## Issues<a name= "issues"></a>
 
----
-
 If you find an issue while using the app or have a request, [log the issue or request here](https://github.com/susulone/hangman-project/issues) log the issue or request here. These issues will be addressed in a future code update.
 
 ## Credits<a name= "credits"></a>
-
----
 
 [Creating Better JSDoc Documentation](https://medium.com/swlh/creating-better-jsdoc-documentation-8b7a65744dcb) by Arturo Martínez
 
