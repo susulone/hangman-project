@@ -1,12 +1,12 @@
 // @ts-check
 
 import hangman from "./hangman.js";
+import align from "./align.js";
 import chalk from "chalk";
 
 /**
  * @license
- * @copyright 2022
- * @author Suvi Sulonen <suvi.sulonen@gmail.com>
+ * Copyright 2022 Suvi Sulonen <suvi.sulonen@gmail.com>
  *
  * This file is part of Hangman Test Project.
  *
@@ -24,30 +24,49 @@ import chalk from "chalk";
  * Description to be added
  * @module states
  * @namespace states
+ * @requires align
+ * @requires hangman
  */
 const states = {
+  /**
+   * This method explains the rules of the game.
+   * @memberof states
+   *
+   */
+  intro: () => {
+    const welcome = chalk.red(`
+     ██░ ██  ▄▄▄       ███▄    █   ▄████  ███▄ ▄███▓ ▄▄▄       ███▄    █ 
+    ▓██░ ██▒▒████▄     ██ ▀█   █  ██▒ ▀█▒▓██▒▀█▀ ██▒▒████▄     ██ ▀█   █ 
+    ▒██▀▀██░▒██  ▀█▄  ▓██  ▀█ ██▒▒██░▄▄▄░▓██    ▓██░▒██  ▀█▄  ▓██  ▀█ ██▒
+    ░▓█ ░██ ░██▄▄▄▄██ ▓██▒  ▐▌██▒░▓█  ██▓▒██    ▒██ ░██▄▄▄▄██ ▓██▒  ▐▌██▒
+    ░▓█▒░██▓ ▓█   ▓██▒▒██░   ▓██░░▒▓███▀▒▒██▒   ░██▒ ▓█   ▓██▒▒██░   ▓██░
+     ▒ ░░▒░▒ ▒▒   ▓▒█░░ ▒░   ▒ ▒  ░▒   ▒ ░ ▒░   ░  ░ ▒▒   ▓▒█░░ ▒░   ▒ ▒ 
+     ▒ ░▒░ ░  ▒   ▒▒ ░░ ░░   ░ ▒░  ░   ░ ░  ░      ░  ▒   ▒▒ ░░ ░░   ░ ▒░
+     ░  ░░ ░  ░   ▒      ░   ░ ░ ░ ░   ░ ░      ░     ░   ▒      ░   ░ ░ 
+     ░  ░  ░      ░  ░         ░       ░        ░         ░  ░         ░ 
+                                                                         `);
+    return welcome;
+  },
   /**
    * This will be shown if the player has won the game.
    * @memberof states
    * @param {Number} remainingLives
    * @param {Array} answerArray
+   * @param {String} chosenWord
    */
-  win: (remainingLives, answerArray) => {
-    // console.clear();
-    // console.log(`  LIVES LEFT: ${remainingLives}`);
-    // const lastStage = hangman.draw(remainingLives);
-    // console.log(lastStage);
-    // console.log("  ", answerArray.join(" "));
-    // console.log(`\n    YOU WON!\n`);
-    // process.exit(0);
-
-    //Using chalk
+  win: (remainingLives, answerArray, chosenWord) => {
     console.clear();
-    console.log(chalk.dim(`  LIVES LEFT: ${remainingLives}`));
+    console.log(
+      align.newLine,
+      align.centerS,
+      chalk.dim(`LIVES LEFT: ${remainingLives}`)
+    );
     const lastStage = hangman.draw(remainingLives);
     console.log(chalk.dim(lastStage));
-    console.log(chalk.dim("  ", answerArray.join(" ")));
-    console.log(chalk.green.bold(`\n    YOU WON!\n`));
+    console.log(
+      chalk.dim(align.adjustAlignment(chosenWord), answerArray.join(" "))
+    );
+    console.log(align.newLine, align.centerXL, chalk.green.bold(`YOU WIN!\n`));
     return 0;
   },
   /**
@@ -57,19 +76,19 @@ const states = {
    * @param {String} chosenWord
    */
   lose: (remainingLives, chosenWord) => {
-    // console.clear();
-    // console.log(`  LIVES LEFT: ${remainingLives}`);
-    // console.log(hangman.stages[6]);
-    // console.log(`    GAME OVER`);
-    // console.log(`\nTHE WORD WAS ${chosenWord}`);
-    // process.exit(0);
-
-    // Using Chalk
     console.clear();
-    console.log(chalk.dim(`  LIVES LEFT: ${remainingLives}`));
+    console.log(
+      align.newLine,
+      align.centerS,
+      chalk.dim(`LIVES LEFT: ${remainingLives}`)
+    );
     console.log(chalk.dim(hangman.stages[6]));
-    console.log(chalk.red.bold(`    GAME OVER`));
-    console.log(chalk.dim(`\nTHE WORD WAS ${chosenWord}`));
+    console.log(align.centerXL, chalk.red.bold(`GAME OVER`));
+    console.log(
+      align.newLine,
+      align.centerXS,
+      chalk.dim(`THE WORD WAS: ${chosenWord}`)
+    );
     return 0;
   },
 };
