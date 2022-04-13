@@ -2,8 +2,7 @@
 
 /**
  * @license
- * @copyright 2022
- * @author Suvi Sulonen <suvi.sulonen@gmail.com>
+ * Copyright 2022 Suvi Sulonen <suvi.sulonen@gmail.com>
  *
  * This file is part of Hangman Test Project.
  *
@@ -30,67 +29,68 @@ const hangman = {
    */
   stages: [
     `
-      +---+
-      |   |
-          |
-          |
-          |
-          |
-    =========
+                                   +---+
+                                   |   |
+                                       |
+                                       |
+                                       |
+                                       |
+                                ===========
       `,
     `
-      +---+
-      |   |
-      O   |
-          |
-          |
-          |
-    =========
+                                   +---+
+                                   |   |
+                                   O   |
+                                       |
+                                       |
+                                       |
+                                ===========
+
       `,
     `
-      +---+
-      |   |
-      O   |
-      |   |
-          |
-          |
-    =========
+                                   +---+
+                                   |   |
+                                   O   |
+                                   |   |
+                                       |
+                                       |
+                                ===========
       `,
     `
-      +---+
-      |   |
-      O   |
-     /|   |
-          |
-          |
-    =========
+                                   +---+
+                                   |   |
+                                   O   |
+                                  /|   |
+                                       |
+                                       |
+                                ===========
       `,
     `
-      +---+
-      |   |
-      O   |
-     /|\\\  |
-          |
-          |
-    =========
+                                   +---+
+                                   |   |
+                                   O   |
+                                  /|\\\  |
+                                       |
+                                       |
+                                ===========
       `,
     `
-      +---+
-      |   |
-      O   |
-     /|\\\  |
-     /    |
-          |
-    =========
+                                   +---+
+                                   |   |
+                                   O   |
+                                  /|\\\  |
+                                  /    |
+                                       |
+                                ===========
       `,
     `
-      +---+
-      |   |
-      O   |
-     /|\\\  |
-     / \\\  |
-          |
-    =========
+                                   +---+
+                                   |   |
+                                   O   |
+                                  /|\\\  |
+                                  / \\\  |
+                                       |
+                                ===========
       `,
   ],
   /**
@@ -100,13 +100,13 @@ const hangman = {
    * @returns {String} corresponding ASCII drawing of the gallows
    */
   draw(remainingLives) {
-    if (remainingLives === 6) return this.stages[0];
-    if (remainingLives === 5) return this.stages[1];
-    if (remainingLives === 4) return this.stages[2];
-    if (remainingLives === 3) return this.stages[3];
-    if (remainingLives === 2) return this.stages[4];
-    if (remainingLives === 1) return this.stages[5];
-    if (remainingLives === 0) return this.stages[6];
+    if (remainingLives === 6) return hangman.stages[0];
+    if (remainingLives === 5) return hangman.stages[1];
+    if (remainingLives === 4) return hangman.stages[2];
+    if (remainingLives === 3) return hangman.stages[3];
+    if (remainingLives === 2) return hangman.stages[4];
+    if (remainingLives === 1) return hangman.stages[5];
+    if (remainingLives === 0) return hangman.stages[6];
   },
 };
 
