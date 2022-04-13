@@ -1,11 +1,11 @@
 // @ts-check
 
 import readlineSync from "readline-sync";
+import align from "./align.js";
 
 /**
  * @license
- * @copyright 2022
- * @author Suvi Sulonen <suvi.sulonen@gmail.com>
+ * Copyright 2022 Suvi Sulonen <suvi.sulonen@gmail.com>
  *
  * This file is part of Hangman Test Project.
  *
@@ -23,6 +23,7 @@ import readlineSync from "readline-sync";
  * Contains everything related to the player. Includes the methods that handle getting the users input and reformatting it to fit the criterias given.
  * @module playerInput
  * @namespace playerInput
+ * @requires align
  */
 const playerInput = {
   /**
@@ -31,7 +32,9 @@ const playerInput = {
    * @returns {String} a string of undetermined length
    */
   get: () => {
-    return readlineSync.question("\n GUESS A LETTER: ");
+    const formattedQuestion =
+      align.newLine + align.centerS + "GUESS A LETTER: ";
+    return readlineSync.question(formattedQuestion);
   },
   /**
    * This method modifies the input to contain only a single capitalized letter.
