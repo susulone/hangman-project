@@ -56,6 +56,7 @@ const states = {
    */
   win: (remainingLives, answerArray, chosenWord) => {
     console.clear();
+    console.log(states.intro());
     console.log(
       align.newLine,
       align.centerS,
@@ -77,6 +78,7 @@ const states = {
    */
   lose: (remainingLives, chosenWord) => {
     console.clear();
+    console.log(states.intro());
     console.log(
       align.newLine,
       align.centerS,
