@@ -22,43 +22,50 @@ describe("states", () => {
     expect(states).toBeObject();
   });
 
-  //   it("should contain a key  called 'intro'", () => {
-  //     expect(states).toContainKey("intro");
-  //   });
-
-  //   it("the key 'intro' should be an method", () => {
-  //     expect(states.intro).toBeFunction();
-  //   });
+  it("should contain a key  called 'intro'", () => {
+    expect(states).toContainKey("intro");
+  });
 
   it("should contain a key  called 'win'", () => {
     expect(states).toContainKey("win");
   });
 
-  it("the key 'win' should be an method", () => {
-    expect(states.win).toBeFunction();
-  });
-
   it("should contain a key  called 'lose'", () => {
     expect(states).toContainKey("lose");
   });
+});
 
-  it("the key 'lose' should be an method", () => {
-    expect(states.lose).toBeFunction();
+describe("intro", () => {
+  it("the key 'intro' should be an method", () => {
+    expect(states.intro).toBeFunction();
+  });
+
+  it("should return a string", () => {
+    expect(states.intro()).toBeString();
   });
 });
 
 describe("win", () => {
+  it("the key 'win' should be an method", () => {
+    expect(states.win).toBeFunction();
+  });
+
   it("spying using original implementation", () => {
     const spy = jest.spyOn(states, "win");
     const anwserArray = ["C", "A", "M", "E", "L"];
     const remainingLives = 6;
+    const chosenWord = "camel";
 
-    expect(states.win(remainingLives, anwserArray)).toBe(0);
-    expect(spy).toHaveBeenCalledWith(6, ["C", "A", "M", "E", "L"]);
+    expect(states.win(remainingLives, anwserArray, chosenWord)).toBe(0);
+    expect(spy).toHaveBeenCalledWith(6, ["C", "A", "M", "E", "L"], "camel");
   });
 });
 
 describe("lose", () => {
+  it("the key 'lose' should be an method", () => {
+    expect(states.lose).toBeFunction();
+  });
+
   it("spying using original implementation", () => {
     const spy = jest.spyOn(states, "lose");
     const chosenWord = "CAMEL";
