@@ -1,12 +1,6 @@
-{@tutorial Install}
-
 # Install
 
----
-
 ## Getting started
-
----
 
 To play the game from your computer and/or contribute to this project, perform the following steps:
 
@@ -60,8 +54,6 @@ This will run all the tests inside the projects and updates the coverage report 
 
 ## Starting the game
 
----
-
 To start the game, run the following command from the project root directory (hangman-project):
 
 ```bash
@@ -73,8 +65,6 @@ When you run this command, you will see the following screen:
 ![starting point](https://i.postimg.cc/Y9rS7JKN/game-start.png)
 
 ## Playing the game
-
----
 
 When the game starts, you will be given a word and the number of letters in that word, try to guess a letter that is in the word. Select your letter and press enter.
 
