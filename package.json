@@ -1,10 +1,14 @@
 {
-  "name": "tamk-vct-testing-project",
+  "name": "hangman-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
     "setupFilesAfterEnv": [
       "jest-extended/all"
     ],
@@ -15,7 +19,7 @@
   "scripts": {
     "jsdoc": "jsdoc -a all -c jsdoc.json -r --readme README.md index.js -d docs/jsdoc && jsdoc2md --files index.js > docs/API.md",
     "test": "jest --watchAll --verbose",
-    "testAll": "jest --verbose --coverage --detectOpenHandles"
+    "testAll": "jest --verbose --detectOpenHandles --coverage --collectCoverageFrom=src/**/*.{js,jsx}"
   },
   "repository": {
     "type": "git",
