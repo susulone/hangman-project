@@ -64,7 +64,7 @@ describe("adjustAlignment", () => {
       expected: align.centerM,
     },
     {
-      input: "Bullcalf",
+      input: "bullcalf",
       expected: align.centerS,
     },
     {
