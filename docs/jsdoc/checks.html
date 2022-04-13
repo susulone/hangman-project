@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>checks - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/susulone/tamk-VCT-testing-project" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h3>Namespaces</h3><ul><li><a href="align.html">align</a><ul class='members'><li data-type='member' style='display: none;'><a href="align.html#.centerL">centerL</a></li><li data-type='member' style='display: none;'><a href="align.html#.centerM">centerM</a></li><li data-type='member' style='display: none;'><a href="align.html#.centerS">centerS</a></li><li data-type='member' style='display: none;'><a href="align.html#.centerXL">centerXL</a></li><li data-type='member' style='display: none;'><a href="align.html#.centerXS">centerXS</a></li><li data-type='member' style='display: none;'><a href="align.html#.newLine">newLine</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="align.html#.adjustAlignment">adjustAlignment</a></li></ul></li><li><a href="checks.html">checks</a><ul class='methods'><li data-type='method' style='display: none;'><a href="checks.html#.forLetterInWord">forLetterInWord</a></li><li data-type='method' style='display: none;'><a href="checks.html#.forRemaningLetters">forRemaningLetters</a></li><li data-type='method' style='display: none;'><a href="checks.html#.forWrongAnswer">forWrongAnswer</a></li></ul></li><li><a href="hangman.html">hangman</a><ul class='members'><li data-type='member' style='display: none;'><a href="hangman.html#.stages">stages</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="hangman.html#.draw">draw</a></li></ul></li><li><a href="playerInput.html">playerInput</a><ul class='methods'><li data-type='method' style='display: none;'><a href="playerInput.html#.get">get</a></li><li data-type='method' style='display: none;'><a href="playerInput.html#.validate">validate</a></li></ul></li><li><a href="states.html">states</a><ul class='methods'><li data-type='method' style='display: none;'><a href="states.html#.intro">intro</a></li><li data-type='method' style='display: none;'><a href="states.html#.lose">lose</a></li><li data-type='method' style='display: none;'><a href="states.html#.win">win</a></li></ul></li><li><a href="words.html">words</a><ul class='members'><li data-type='member' style='display: none;'><a href="words.html#.list">list</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="words.html#.displayWord">displayWord</a></li><li data-type='method' style='display: none;'><a href="words.html#.getWord">getWord</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#app">app</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">checks</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        checks
+        </h2>
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="src_checks.js.html">src/checks.js</a>, <a href="src_checks.js.html#line19">line 19</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+            
+                <div class="description usertext"><p>This object holds all the functionality used to check if the player's guess was right and if all the letters have been guessed.</p></div>
+            
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".forLetterInWord"><span class="type-signature">(static) </span>forLetterInWord<span class="signature">(chosenWord, guessedLetter, anwserArray)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="src_checks.js.html">src/checks.js</a>, <a href="src_checks.js.html#line36">line 36</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>This method takes three parameters: a word, a letter and an array. It checks if any of the character in the given word,
+matches the given letter. If a character matches with the letter, the method will update the given array at that index.
+After all the characters have been checked, it returns the updated array.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>chosenWord</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a word of random length</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>guessedLetter</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a single letter</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>anwserArray</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an array with as many blank spaces as the <tt>chosenWords</tt> has letters</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a copy of the <tt>anwserArray</tt> with possible letters replacing some of the blank spaces</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".forRemaningLetters"><span class="type-signature">(static) </span>forRemaningLetters<span class="signature">(answerArray)</span><span class="type-signature"> &rarr; {Number}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="src_checks.js.html">src/checks.js</a>, <a href="src_checks.js.html#line53">line 53</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>This method calculates how many blanks spaces (<tt>'_'</tt>) there are in the given array.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>answerArray</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an array with a mix of blanks spaces and letters</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>the amount of of blank spaces in the array</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".forWrongAnswer"><span class="type-signature">(static) </span>forWrongAnswer<span class="signature">(answerArray, updateAnswerArray)</span><span class="type-signature"> &rarr; {Number}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="src_checks.js.html">src/checks.js</a>, <a href="src_checks.js.html#line74">line 74</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>This method checks if the two given arrays are equal. If the arrays are equal, the method's return value
+will be changed to be 1, otherwise it will stay as 0.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>answerArray</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an array with a mix of blanks spaces and letters</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>updateAnswerArray</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an array with a mix of blanks spaces and letters, this array also includes the players last guess</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>0 unless the arrays are equal, in that case it will return 1</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Wed Apr 13 2022 14:56:06 GMT+0300 (Itä-Euroopan kesäaika) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>

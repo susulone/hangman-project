@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>Home - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/susulone/tamk-VCT-testing-project" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h3>Namespaces</h3><ul><li><a href="align.html">align</a><ul class='members'><li data-type='member' style='display: none;'><a href="align.html#.centerL">centerL</a></li><li data-type='member' style='display: none;'><a href="align.html#.centerM">centerM</a></li><li data-type='member' style='display: none;'><a href="align.html#.centerS">centerS</a></li><li data-type='member' style='display: none;'><a href="align.html#.centerXL">centerXL</a></li><li data-type='member' style='display: none;'><a href="align.html#.centerXS">centerXS</a></li><li data-type='member' style='display: none;'><a href="align.html#.newLine">newLine</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="align.html#.adjustAlignment">adjustAlignment</a></li></ul></li><li><a href="checks.html">checks</a><ul class='methods'><li data-type='method' style='display: none;'><a href="checks.html#.forLetterInWord">forLetterInWord</a></li><li data-type='method' style='display: none;'><a href="checks.html#.forRemaningLetters">forRemaningLetters</a></li><li data-type='method' style='display: none;'><a href="checks.html#.forWrongAnswer">forWrongAnswer</a></li></ul></li><li><a href="hangman.html">hangman</a><ul class='members'><li data-type='member' style='display: none;'><a href="hangman.html#.stages">stages</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="hangman.html#.draw">draw</a></li></ul></li><li><a href="playerInput.html">playerInput</a><ul class='methods'><li data-type='method' style='display: none;'><a href="playerInput.html#.get">get</a></li><li data-type='method' style='display: none;'><a href="playerInput.html#.validate">validate</a></li></ul></li><li><a href="states.html">states</a><ul class='methods'><li data-type='method' style='display: none;'><a href="states.html#.intro">intro</a></li><li data-type='method' style='display: none;'><a href="states.html#.lose">lose</a></li><li data-type='method' style='display: none;'><a href="states.html#.win">win</a></li></ul></li><li><a href="words.html">words</a><ul class='members'><li data-type='member' style='display: none;'><a href="words.html#.list">list</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="words.html#.displayWord">displayWord</a></li><li data-type='method' style='display: none;'><a href="words.html#.getWord">getWord</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#app">app</a></li></ul>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+    <section class="package">
+        <h3> </h3>		
+    </section>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    <section class="readme usertext">
+        <article><h1>Javascript Hangman Testing Project</h1>
+<hr>
+<h2>Table of contents</h2>
+<hr>
+<ul>
+<li><a href="#about">About this Project</a></li>
+<li><a href="#background">Background</a></li>
+<li><a href="#frameworks-libraries">Used framewoks and libraries</a>
+<ul>
+<li><a href="#libraries">Libraries</a></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="#documentation">Documentation</a></li>
+</ul>
+</li>
+<li><a href="#future-dev">Future code development</a></li>
+<li><a href="#releases">Release information</a></li>
+<li><a href="#issues">Issues</a></li>
+<li><a href="#credits">Credits</a></li>
+</ul>
+<h2>About this project<a name="about"></a></h2>
+<hr>
+<p>This project is a command line version of the classic game of Hangman. Behind the scenes this project also includes unit testing for the game's different modules.</p>
+<h2>Background<a name="background"></a></h2>
+<hr>
+<p>This project was made as a part of TAMK's Version Control and Testing course. The purpose of this project is to familiarize myself with the consepts of unit testing and project documentation and learn how to apply them to my projects.</p>
+<h2>Used framewoks and libraries<a name= "frameworks-libraries"></a></h2>
+<hr>
+<p>This project was build using <a href="https://nodejs.org/en/">Node.js</a> and ECMAScript2015+ syntaxes.</p>
+<h3>Libraries<a name= "libraries"></a></h3>
+<ul>
+<li><a href="https://github.com/chalk/chalk#readme" title="chalk">chalk</a> - used to add color and styling to the game</li>
+<li><a href="https://www.npmjs.com/package/readline-sync" title="readlineSync">readline-sync</a>- used to prompt users for a letter throughout the game</li>
+</ul>
+<h3>Testing frameworks<a name= "testing"></a></h3>
+<ul>
+<li><a href="https://jestjs.io/" title="jest">jest</a> - testing framework for javascript</li>
+<li><a href="https://www.npmjs.com/package/jest-extended" title="jest-extended">jest-extended</a> - adds additional matchers to jest's default ones</li>
+<li><a href="https://www.npmjs.com/package/@babel/preset-env" title="@babel/preset-env">@babel/preset-env</a> - enables the use of ESM with jest</li>
+</ul>
+<h3>Documentation<a name= "documentation"></a></h3>
+<ul>
+<li><a href="https://www.npmjs.com/package/jsdoc" title="jsdoc">jsdoc</a> - an API documentation generator for JavaScript.</li>
+<li><a href="https://www.npmjs.com/package/jsdoc-to-markdown" title="jsdoc-to-markdown">jsdoc-to-markdown</a> - generates markdown API documentation from jsdoc annotated source code</li>
+<li><a href="https://www.npmjs.com/package/docdash" title="docdash">docdash</a> - documentation template theme for JSDoc 3</li>
+</ul>
+<h2>Future code development<a name= "future-dev"></a></h2>
+<hr>
+<p>Source code will be developed over time to handle new features.</p>
+<p>The following is a list of potential feature enhancements:</p>
+<ul>
+<li>
+<p>Inproved communication with the player.</p>
+</li>
+<li>
+<p>Expand the game to include different categories.</p>
+</li>
+<li>
+<p>When random word is chosen at the beginning of the game, display a hint to help the player.</p>
+</li>
+</ul>
+<h2>Release information<a name= "releases"></a></h2>
+<hr>
+<ul>
+<li>1.0.0 Released (2022-04-13)</li>
+</ul>
+<h2>Issues<a name= "issues"></a></h2>
+<hr>
+<p>If you find an issue while using the app or have a request, <a href="https://github.com/susulone/hangman-project/issues">log the issue or request here</a> log the issue or request here. These issues will be addressed in a future code update.</p>
+<h2>Credits<a name= "credits"></a></h2>
+<hr>
+<p><a href="https://medium.com/swlh/creating-better-jsdoc-documentation-8b7a65744dcb">Creating Better JSDoc Documentation</a> by Arturo Martínez</p>
+<p><a href="https://medium.com/@trukrs/type-safe-javascript-with-jsdoc-7a2a63209b76">Type Safe JavaScript with JSDoc</a> by TruckJS</p>
+<p><a href="https://youtu.be/kA9Pdu-IblI">Intro to Jest - Testing with ES6</a> by Benji</p>
+<p><a href="https://youtu.be/_oHByo8tiEY">5-Minute Node.js CLI Project</a> by Fireship</p></article>
+    </section>
+
+
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Wed Apr 13 2022 14:56:06 GMT+0300 (Itä-Euroopan kesäaika) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>

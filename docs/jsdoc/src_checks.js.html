@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>src/checks.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/susulone/tamk-VCT-testing-project" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h3>Namespaces</h3><ul><li><a href="align.html">align</a><ul class='members'><li data-type='member' style='display: none;'><a href="align.html#.centerL">centerL</a></li><li data-type='member' style='display: none;'><a href="align.html#.centerM">centerM</a></li><li data-type='member' style='display: none;'><a href="align.html#.centerS">centerS</a></li><li data-type='member' style='display: none;'><a href="align.html#.centerXL">centerXL</a></li><li data-type='member' style='display: none;'><a href="align.html#.centerXS">centerXS</a></li><li data-type='member' style='display: none;'><a href="align.html#.newLine">newLine</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="align.html#.adjustAlignment">adjustAlignment</a></li></ul></li><li><a href="checks.html">checks</a><ul class='methods'><li data-type='method' style='display: none;'><a href="checks.html#.forLetterInWord">forLetterInWord</a></li><li data-type='method' style='display: none;'><a href="checks.html#.forRemaningLetters">forRemaningLetters</a></li><li data-type='method' style='display: none;'><a href="checks.html#.forWrongAnswer">forWrongAnswer</a></li></ul></li><li><a href="hangman.html">hangman</a><ul class='members'><li data-type='member' style='display: none;'><a href="hangman.html#.stages">stages</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="hangman.html#.draw">draw</a></li></ul></li><li><a href="playerInput.html">playerInput</a><ul class='methods'><li data-type='method' style='display: none;'><a href="playerInput.html#.get">get</a></li><li data-type='method' style='display: none;'><a href="playerInput.html#.validate">validate</a></li></ul></li><li><a href="states.html">states</a><ul class='methods'><li data-type='method' style='display: none;'><a href="states.html#.intro">intro</a></li><li data-type='method' style='display: none;'><a href="states.html#.lose">lose</a></li><li data-type='method' style='display: none;'><a href="states.html#.win">win</a></li></ul></li><li><a href="words.html">words</a><ul class='members'><li data-type='member' style='display: none;'><a href="words.html#.list">list</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="words.html#.displayWord">displayWord</a></li><li data-type='method' style='display: none;'><a href="words.html#.getWord">getWord</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#app">app</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">src/checks.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// @ts-check
+
+/**
+ * @license
+ * Copyright 2022 Suvi Sulonen &lt;suvi.sulonen@gmail.com>
+ *
+ * This file is part of Hangman Test Project.
+ *
+ * Hangman Test Project is free software: you can redistribute it and/or modify it under the terms of the
+ * GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Hangman Test Project is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the
+ * implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with Hangman Test Project. If not, see &lt;https://www.gnu.org/licenses/>.
+ */
+
+/**
+ * This object holds all the functionality used to check if the player's guess was right and if all the letters have been guessed.
+ * @module checks
+ * @namespace checks
+ * @type {Object}
+ */
+const checks = {
+  /**
+   * This method takes three parameters: a word, a letter and an array. It checks if any of the character in the given word,
+   * matches the given letter. If a character matches with the letter, the method will update the given array at that index.
+   * After all the characters have been checked, it returns the updated array.
+   * @memberof checks
+   * @param {String} chosenWord a word of random length
+   * @param {String} guessedLetter a single letter
+   * @param {Array} anwserArray an array with as many blank spaces as the &lt;tt>chosenWords&lt;/tt> has letters
+   * @returns {Array} a copy of the &lt;tt>anwserArray&lt;/tt> with possible letters replacing some of the blank spaces
+   */
+  forLetterInWord: (chosenWord, guessedLetter, anwserArray) => {
+    let updatedAnwserArray = anwserArray.map((letter) => letter);
+    let index = -1;
+    for (const char of chosenWord) {
+      index++;
+      if (char == guessedLetter) {
+        updatedAnwserArray[index] = guessedLetter;
+      }
+    }
+    return updatedAnwserArray;
+  },
+  /**
+   * This method calculates how many blanks spaces (&lt;tt>'_'&lt;/tt>) there are in the given array.
+   * @memberof checks
+   * @param {Array} answerArray an array with a mix of blanks spaces and letters
+   * @returns {Number} the amount of of blank spaces in the array
+   */
+  forRemaningLetters: (answerArray) => {
+    let results = answerArray.includes("_");
+    let count = 0;
+
+    if (results === true) {
+      for (let i = 0; i &lt; answerArray.length; i++) {
+        if (answerArray[i] === "_") count++;
+      }
+    } else if (results === false) {
+      count = 0;
+    }
+    return count;
+  },
+  /**
+   * This method checks if the two given arrays are equal. If the arrays are equal, the method's return value
+   * will be changed to be 1, otherwise it will stay as 0.
+   * @memberof checks
+   * @param {Array} answerArray an array with a mix of blanks spaces and letters
+   * @param {Array} updateAnswerArray an array with a mix of blanks spaces and letters, this array also includes the players last guess
+   * @returns {Number} 0 unless the arrays are equal, in that case it will return 1
+   */
+  forWrongAnswer: (answerArray, updateAnswerArray) => {
+    let value = 0;
+    let isEqual = updateAnswerArray.every(
+      (value, index) => value === answerArray[index]
+    );
+    if (isEqual === true) {
+      value++;
+    } else {
+      value = 0;
+    }
+    return value;
+  },
+};
+
+export default checks;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Wed Apr 13 2022 14:56:06 GMT+0300 (Itä-Euroopan kesäaika) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>
