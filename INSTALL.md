@@ -4,7 +4,12 @@
 
 To play the game from your computer and/or contribute to this project, perform the following steps:
 
-1.[Clone the repository](#clone) 2.[Install Node.js](#node) 3. [Install the dependencies](#dependencies) 4. Run tests 5. Start game
+1. [Clone the repository](#clone)
+2. [Install Node.js](#node)
+3. [Install the dependencies](#dependencies)
+4. [Run the tests](#tests)
+5. [Start game](#start-game)
+6. [Playing the game](#play-game)
 
 ### Clone the repository<a name="clone"></a>
 
@@ -42,7 +47,7 @@ This project was build using [Node.js](https://nodejs.org/en/) and ECMAScript201
 
 Version information for each of these packages is available in the package.json file in the project root directory.
 
-## Run the tests
+## Run the tests<a name="tests"></a>
 
 To run the unit tests, run the following command from the project root directory (hangman-project):
 
@@ -52,7 +57,7 @@ To run the unit tests, run the following command from the project root directory
 
 This will run all the tests inside the projects and updates the coverage report inside the project's subfolder called coverage. You can view the summary of the testing by opening the clover.xml with VSCode's Live Server extension and access the report in http://localhost:port/coverage/lcov-report/.
 
-## Starting the game
+## Starting the game<a name="start-game"></a>
 
 To start the game, run the following command from the project root directory (hangman-project):
 
@@ -64,7 +69,7 @@ When you run this command, you will see the following screen:
 
 ![starting point](https://i.postimg.cc/Y9rS7JKN/game-start.png)
 
-## Playing the game
+## Playing the game<a name="play-game"></a>
 
 When the game starts, you will be given a word and the number of letters in that word, try to guess a letter that is in the word. Select your letter and press enter.
 
