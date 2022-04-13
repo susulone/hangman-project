@@ -3,11 +3,11 @@ import hangman from "./src/hangman.js";
 import checks from "./src/checks.js";
 import states from "./src/states.js";
 import playerInput from "./src/player-input.js";
+import align from "./src/align.js";
 
 /**
  * @license
- * @copyright 2022
- * @author Suvi Sulonen <suvi.sulonen@gmail.com>
+ * Copyright 2022 Suvi Sulonen <suvi.sulonen@gmail.com>
  *
  * This file is part of Hangman Test Project.
  *
@@ -26,14 +26,13 @@ import playerInput from "./src/player-input.js";
  * @requires hangman
  * @requires checks
  * @requires states
+ * @requires align
  * @require playerInput
  * This is the entry point for the game. This function will contain the game loop and call the other methods when they are needed.
  */
-const main = () => {
+const app = () => {
   let remainingLetters;
   let remainingLives = 6;
-
-  console.log("\n    HANGMAN!");
 
   const chosenWord = words.getWord();
   let answerArray = words.displayWord(chosenWord);
@@ -41,12 +40,13 @@ const main = () => {
 
   // GameLoop
   while (remainingLetters >= 0 || remainingLives >= 0) {
+    console.log(states.intro());
     const theGallows = hangman.draw(remainingLives);
 
     // Set the screen for the current round
-    console.log(`\n  LIVES LEFT: ${remainingLives}`);
+    console.log(align.newLine, align.centerS, `LIVES LEFT: ${remainingLives}`);
     console.log(theGallows);
-    console.log("  ", answerArray.join(" "));
+    console.log(align.adjustAlignment(chosenWord), answerArray.join(" "));
 
     const input = playerInput.get();
     const playerGuess = playerInput.validate(input);
@@ -65,7 +65,7 @@ const main = () => {
     remainingLetters = checks.forRemaningLetters(answerArray);
 
     if (remainingLetters === 0) {
-      const result = states.win(remainingLives, answerArray);
+      const result = states.win(remainingLives, answerArray, chosenWord);
       process.exit(result);
     }
     if (remainingLives === 0) {
@@ -77,6 +77,6 @@ const main = () => {
   }
 };
 
-main();
+app();
 
-export default main;
+export default app;
