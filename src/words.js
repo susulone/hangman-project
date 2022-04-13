@@ -27,7 +27,7 @@ const words = {
    * @memberof words
    * @type {Array}
    */
-  list: ["ardvark", "baboon", "camel"],
+  list: ["ox", "aardvark", "baboon", "camel", "bullcalf", "salamander"],
   /**
    * This method generates one random word from a the array of words given as an argument.
    * @memberof words
